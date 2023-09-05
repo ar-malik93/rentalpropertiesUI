@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useFetchHouse } from "../hooks/HouseHook";
 import ApiStatus from "../status/ApiStatus";
 import { currencyFormatter } from "../config";
@@ -29,7 +29,7 @@ const HouseDetail = () => {
               alt="House pic"
             />
           </div>
-         
+          <Link className="btn btn-primary" to={`/house/update/${data.id}`} > Edit </Link>
         </div>
         <div className="col-6">
           <div className="row mt-2">
@@ -47,6 +47,9 @@ const HouseDetail = () => {
             <div className="col-12 mt-3">{data.description}</div>
           </div>          
         </div>
+
+          
+
       </div>
     )
 

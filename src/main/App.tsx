@@ -5,6 +5,8 @@ import Header from './Header';
 import HouseList from '../house/HouseList';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import HouseDetail from '../house/HouseDetail';
+import AddHouse from '../house/AddHouse';
+import EditHouse from '../house/EditHouse';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
       <Routes>
         <Route path="/" element={ <HouseList />}> </Route>
         <Route path="/house/:id" element={<HouseDetail />}> </Route>
+        <Route path="/house/add" element={<AddHouse />} > </Route>
+        <Route path="/house/update/:id" element={<EditHouse />} > </Route>
       </Routes>      
     </div>
     </BrowserRouter>
